@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'tipcalculator.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
@@ -77,6 +77,16 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'A soma é: $soma',
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navega para a SecondScreen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TipCalculator()),
+                );
+              },
+              child: const Text('Ir para a Calculadora de Gorjeta'),
             ),
           ],
         ),
