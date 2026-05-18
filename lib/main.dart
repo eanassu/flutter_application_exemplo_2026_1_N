@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_soma/desenho.dart';
 import 'package:flutter_application_soma/home_screen.dart';
+import 'package:flutter_application_soma/map_screen.dart';
 import 'tipcalculator.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
@@ -123,6 +124,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Ir para Tela de Desenho'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MapScreen()),
+                );
+              },
+              child: const Text('Ir para Tela de Mapa'),
+            ),
+
           ],
         ),
       ),
